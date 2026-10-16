@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aser Love Kenzy 💗</title>
+<style>
+:root{--pink:#ff4f91;--rose:#ff8bb5;--deep:#3b1530;--cream:#fff6fa}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;overflow:hidden;font-family:Tahoma,Arial,sans-serif;color:var(--deep);background:radial-gradient(circle at 20% 15%,#ffe2ef 0,transparent 28%),radial-gradient(circle at 85% 80%,#ffd5e6 0,transparent 30%),linear-gradient(135deg,#fff7fb,#ffd8e8);display:grid;place-items:center}
+.scene{position:relative;width:min(94vw,700px);min-height:100vh;display:grid;place-items:center;padding:25px}
+.title{position:absolute;top:7%;text-align:center;width:100%;padding:0 12px;animation:fadeIn 1.2s ease both}
+.title h1{font-size:clamp(1.7rem,5vw,3rem);margin:0;color:#d92f78;text-shadow:0 4px 20px #ff8bb555;direction:ltr}
+.title p{margin:8px 0 0;color:#9c4b70;font-size:1rem}
+.envelope-wrap{position:relative;width:min(84vw,440px);height:300px;perspective:1200px;margin-top:50px;cursor:pointer;filter:drop-shadow(0 24px 28px #a72d6525);-webkit-tap-highlight-color:transparent}
+.envelope{position:absolute;inset:0;border-radius:8px;background:#ff9fc3;overflow:visible}
+.env-back{position:absolute;inset:0;border-radius:8px;background:linear-gradient(145deg,#ffb4d0,#ff7eae)}
+.letter{position:absolute;left:7%;right:7%;bottom:5%;height:88%;border-radius:12px;background:linear-gradient(#fffdfd,#fff0f6);padding:24px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 18px #a52d5b20;transition:transform 1s cubic-bezier(.2,.8,.2,1),z-index 0s .5s;z-index:2}
+.letter .small{font-size:.95rem;color:#c54b7c;margin:0 0 9px}
+.letter h2{direction:ltr;font-size:clamp(1.8rem,7vw,3.2rem);line-height:1.2;margin:0;color:#df367f;text-shadow:0 3px 0 #ffe1ed}
+.letter p{font-size:1rem;line-height:1.9;margin:14px 0 0;color:#86445f;max-width:320px}
+.letter .signature{font-weight:bold;color:#df367f;margin-top:14px}
+.flap{position:absolute;inset:0 0 auto;height:60%;transform-origin:top center;transform:rotateX(0);transition:transform .85s ease;z-index:5;clip-path:polygon(0 0,100% 0,50% 100%);background:linear-gradient(160deg,#ffcee0,#ff6ca5);border-radius:8px 8px 0 0;backface-visibility:visible}
+.front{position:absolute;inset:0;border-radius:8px;z-index:4;background:linear-gradient(35deg,#ff7bad,#ffa6c8);clip-path:polygon(0 0,50% 52%,100% 0,100% 100%,0 100%);pointer-events:none}
+.front:after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#ffb7d1aa,#ff5e9a33);clip-path:polygon(0 100%,50% 48%,100% 100%)}
+.seal{position:absolute;z-index:7;left:50%;top:54%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#ffeff5,#ed347d 70%);box-shadow:0 7px 18px #a5215a55;color:#fff;font-size:2rem;transition:opacity .3s,transform .5s}
+.hint{position:absolute;top:calc(100% + 22px);left:0;right:0;text-align:center;color:#a64d75;font-size:.95rem;animation:pulse 1.8s ease-in-out infinite}
+.envelope-wrap.open .flap{transform:rotateX(180deg);z-index:1}
+.envelope-wrap.open .letter{transform:translateY(-145px);z-index:6;transition-delay:.25s}
+.envelope-wrap.open .seal{opacity:0;transform:translate(-50%,-50%) scale(.3)}
+.envelope-wrap.open .hint{animation:none}
+.heart{position:fixed;bottom:-40px;left:var(--x);font-size:var(--s);color:var(--c);opacity:0;pointer-events:none;animation:rise var(--d) linear var(--delay) infinite;filter:drop-shadow(0 4px 7px #ff4f9133)}
+.sparkle{position:absolute;color:#ff6ba5;font-size:1.4rem;animation:twinkle 2.2s ease-in-out infinite}
+.s1{left:7%;top:34%}.s2{right:8%;top:45%;animation-delay:.7s}.s3{left:14%;bottom:18%;animation-delay:1.2s}.s4{right:13%;bottom:21%;animation-delay:.4s}
+.reset{position:absolute;bottom:5%;border:1px solid #f3a3c3;background:#ffffffa8;color:#a63869;border-radius:99px;padding:10px 17px;font-size:.9rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+.scene.opened .reset{opacity:1;pointer-events:auto}
+@keyframes rise{0%{transform:translateY(0) rotate(0) scale(.7);opacity:0}10%{opacity:.8}90%{opacity:.7}100%{transform:translateY(-115vh) rotate(35deg) scale(1.2);opacity:0}}
+@keyframes pulse{0%,100%{transform:translateY(0);opacity:.75}50%{transform:translateY(-5px);opacity:1}}
+@keyframes twinkle{0%,100%{transform:scale(.75) rotate(-8deg);opacity:.45}50%{transform:scale(1.2) rotate(8deg);opacity:1}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:480px){.envelope-wrap{height:255px}.letter{padding:18px 13px}.letter p{font-size:.9rem}.envelope-wrap.open .letter{transform:translateY(-125px)}.title{top:8%}.hint{font-size:.85rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="scene" id="scene">
+  <header class="title"><h1>Aser <span style="color:#ff4f91">♥</span> Kenzy</h1><p>في رسالة صغيرة مستنياكي 💌</p></header>
+  <span class="sparkle s1">✦</span><span class="sparkle s2">♡</span><span class="sparkle s3">✧</span><span class="sparkle s4">♡</span>
+  <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="افتح الظرف" aria-expanded="false">
+    <div class="envelope"><div class="env-back"></div>
+      <article class="letter">
+        <p class="small">إلى أحلى حد في الدنيا 💗</p>
+        <h2>Aser Love Kenzy</h2>
+        <p>يمكن الكلام مش هيكفي أوصفلك قد إيه وجودك بيفرّحني. كل يوم معاكي ليه معنى أحلى، وابتسامتك بتخلّي الدنيا أهدى وأجمل. 💞</p>
+        <p class="signature">You are my favorite person ♡</p>
+      </article>
+      <div class="flap"></div><div class="front"></div><div class="seal">♥</div>
+    </div>
+    <div class="hint" id="hint">اضغط على الظرف عشان تفتح الرسالة 💌</div>
+  </div>
+  <button class="reset" id="reset" type="button">اقفل الظرف تاني ↻</button>
+</div>
+<script>
+const envelope=document.getElementById('envelope');
+const scene=document.getElementById('scene');
+const hint=document.getElementById('hint');
+const reset=document.getElementById('reset');
+let opened=false;
+function setOpen(value){opened=value;envelope.classList.toggle('open',opened);scene.classList.toggle('opened',opened);envelope.setAttribute('aria-expanded',String(opened));hint.textContent=opened?'رسالة مخصوص ليكي يا Kenzy 💗':'اضغط على الظرف عشان تفتح الرسالة 💌';}
+envelope.addEventListener('click',()=>setOpen(!opened));
+envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setOpen(!opened);}});
+reset.addEventListener('click',()=>setOpen(false));
+const hearts=['♥','♡','💗','💖','💕','💘'];
+for(let i=0;i<24;i++){const h=document.createElement('span');h.className='heart';h.textContent=hearts[i%hearts.length];h.style.setProperty('--x',Math.random()*100+'vw');h.style.setProperty('--s',(14+Math.random()*22)+'px');h.style.setProperty('--d',(8+Math.random()*10)+'s');h.style.setProperty('--delay',(-Math.random()*18)+'s');h.style.setProperty('--c',['#ff4f91','#e94e91','#ff85b3','#d85a98'][i%4]);document.body.appendChild(h);}
+</script>
+</body>
+</html>
